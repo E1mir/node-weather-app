@@ -1,0 +1,9 @@
+{
+  "name": "node-weather-app",
+  "version": "1.0.0",
+  "description": "Node.js weather app",
+  "main": "app.js",
+  "author": "Elmir Ismayilzada",
+  "license": "MIT",
+  "dependencies": {}
+}
