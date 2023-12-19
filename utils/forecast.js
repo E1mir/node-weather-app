@@ -19,7 +19,7 @@ const forecast = ({latitude, longitude} = {}, callback) => {
           const message = `${weather_descriptions[0]}. It's currently ${temperature} degrees out. It feels like ${feelslike} degrees out.`;
           callback(null, message);
         } else {
-          throw new Error(parsedData.error.info);
+          callback(parsedData.error.info, null);
         }
       } catch (error) {
         callback(`Error parsing response from Weatherstack API. ${error.message}`, null);

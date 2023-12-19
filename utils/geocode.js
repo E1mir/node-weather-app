@@ -32,9 +32,11 @@ const geocode = (address, callback) => {
           } else {
             callback('Unable to find location.', null);
           }
+        } else {
+          callback(parsedData.error.message, null)
         }
       } catch (error) {
-        callback('Error parsing response from Positionstack API.', null);
+        callback(`Error parsing response from Positionstack API. ${error.message}`, null);
       }
     });
   });
